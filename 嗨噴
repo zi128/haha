@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認識 ENHYPEN</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Cinzel Decorative', cursive;
+      background: linear-gradient(to bottom, #1a1a1a, #330000);
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #000;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #800000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #b30000;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a0000;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .member-card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border: 1px solid #800000;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #b30000;
+    }
+
+    .member-name {
+      font-size: 1.5rem;
+      color: #ffcccc;
+    }
+
+    .interactive-btn {
+      background-color: #800000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .interactive-btn:hover {
+      background-color: #b30000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a0000;
+      border-top: 1px solid #800000;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ENHYPEN：吸血鬼的魅力</h1>
+  </header>
+
+  <nav>
+    <a href="#intro">團體介紹</a>
+    <a href="#members">成員</a>
+    <a href="#interact">互動</a>
+  </nav>
+
+  <section id="intro">
+    <h2>團體介紹</h2>
+    <p>ENHYPEN 是來自韓國的男子音樂組合，於2020年透過選秀節目《I-LAND》出道。他們的音樂融合了現代流行、舞曲與神秘感，特別是吸血鬼世界觀更讓人著迷。</p>
+  </section>
+
+  <section id="members">
+    <h2>成員介紹</h2>
+    <div class="member-card">
+      <div class="member-name">JUNGWON（楊正元）</div>
+      <p>隊長，擁有強烈的舞台魅力與領導能力。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">HEESEUNG（李熙勝）</div>
+      <p>主唱與全能型成員，聲音穿透力強。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">JAY（朴鐘成）</div>
+      <p>韓美混血的個性成員，擁有獨特的表演風格。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">JAKE（沈載倫）</div>
+      <p>有著溫柔嗓音與穩定台風，來自澳洲。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">SUNGHOON（朴成訓）</div>
+      <p>冰王子般的外貌，曾是花式滑冰選手。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">SUNOO（金善祐）</div>
+      <p>甜美笑容與豐富表情的魅力擔當。</p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">NI-KI（西村力）</div>
+      <p>來自日本的天才舞者，是最年輕的成員。</p>
+    </div>
+  </section>
+
+  <section id="interact">
+    <h2>互動小遊戲</h2>
+    <p>點擊下方按鈕，選擇你的吸血鬼搭檔！</p>
+    <button class="interactive-btn" onclick="choosePartner()">選擇搭檔</button>
+    <p id="result"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 ENHYPEN 粉絲互動頁 | 吸血鬼風格設計</p>
+  </footer>
+
+  <script>
+    function choosePartner() {
+      const members = ["JUNGWON", "HEESEUNG", "JAY", "JAKE", "SUNGHOON", "SUNOO", "NI-KI"];
+      const chosen = members[Math.floor(Math.random() * members.length)];
+      document.getElementById("result").textContent = `你的吸血鬼搭檔是：${chosen}！`;
+    }
+  </script>
+</body>
+</html>
